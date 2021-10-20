@@ -65,5 +65,8 @@ minikube ip
 ```
 
 > :warning: **Sometime minikube do not allow to access port** Use below command to access application.
-# service --url curl
+```
+service --url curl
+```
+
 ### It will give you one IP address and random port to access this application.
