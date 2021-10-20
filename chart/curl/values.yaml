@@ -1,0 +1,29 @@
+replicaCount: 2
+
+image:
+  repository: tanmay8898/curl
+  pullPolicy: Always
+  tag: "1.0"
+
+service:
+  type: ClusterIP
+  # This port is expose to service internally
+  # In my developement I have open port 80 to container on pod
+  # and 31000 on nodePort
+  # |browser| ---> listen on port 31000 ----> |cluster|Service listen on port 8080 -------> |pod| container listen on 80 
+  port: 80
+  targetPort: 80
+  nodePort: 31000
+
+resources:
+  limits:
+    cpu: 10m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 128Mi
+
+mail:
+  sender: tpvarade@mitaoe.ac.in
+  password: Srushti@8898
+  reciever: tpvarade@mitaoe.ac.in

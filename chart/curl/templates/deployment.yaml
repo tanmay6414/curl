@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "curl.fullname" . }}
+  labels:
+    app: go
+    {{- include "curl.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: go
+      {{- include "curl.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app: go
+        {{- include "curl.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 80
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+          - name: SENDER_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "curl.fullname" . }}
+                key: SENDER_MAIL_USERNAME
+          - name: SENDER_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "curl.fullname" . }}
+                key: SENDER_MAIL_PASSWORD
+          - name: RECEIVER_MAIL
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "curl.fullname" . }}
+                key: RECEIVER_MAIL_ADDRESS
