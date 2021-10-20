@@ -1,8 +1,8 @@
-### Update made in application
+## Update made in application
 1. Application is not running properly, giving panic error so updated some code for sending mail
 2. Also application does not contain any code for starting webserver, added this code to start webserver while starting 
-### Working with Dockerfile
-## Completing below task
+## Working with Dockerfile
+####SS Completing below task
 1. Use latest stable ```golang:1.17.2-alpine``` image as base image which is of much smaller in size.
 ```
 FROM golang:1.17.2-alpine as builder
