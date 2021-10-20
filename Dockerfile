@@ -6,10 +6,18 @@ RUN mkdir /app
 WORKDIR /app 
 # Copy application data into this directory
 COPY ./app ./
-EXPOSE 587
+# Add default environment variable
+# This can be override
+ENV SENDER_USERNAME="some email"
+ENV SENDER_PASSWORD="some password"
+ENV RECEIVER_MAIL="some password"
+# Build go app
 RUN CGO_ENABLED=0 GOOS=linux go build main.go
 
-FROM busybox  
+# multi steg Dockerfile
+FROM scratch
+# Copy from above build
 COPY --from=builder /app ./go-app 
 WORKDIR /go-app
-ENTRYPOINT ["/bin/sh", "-c", "./main"]  
+# Starting go app
+ENTRYPOINT [ "./main"]  
