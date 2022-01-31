@@ -6,15 +6,10 @@ node {
         checkout([
                                 $class                           : 'GitSCM',
                                 branches                         : [[name: "*/master"]],
-                                doGenerateSubmoduleConfigurations: false,
                                 extensions                       : [
                                     [
                                         $class             : 'SparseCheckoutPaths',
                                         sparseCheckoutPaths: [[path: "app"]]
-                                    ],
-                                    [
-                                        $class             : 'SparseCheckoutPaths',
-                                        sparseCheckoutPaths: [[path: "Jenkinsfile"]]
                                     ],
                                     [
                                         $class: 'RelativeTargetDirectory', 
