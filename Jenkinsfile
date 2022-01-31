@@ -9,6 +9,10 @@ node {
                                         $class             : 'SparseCheckoutPaths',
                                         sparseCheckoutPaths: [[path: "app"]]
                                     ],
+                                    [
+                                        $class             : 'SparseCheckoutPaths',
+                                        sparseCheckoutPaths: [[path: "a.sh"]]
+                                    ],
                
                                ],
                                 gitTool                          : 'Default',
