@@ -9,7 +9,7 @@ node {
                                 extensions                       : [
                                     [
                                         $class             : 'SparseCheckoutPaths',
-                                        sparseCheckoutPaths: [[path: "${cluster}/workloads/keycloak/${stack}.values.yaml"]]
+                                        sparseCheckoutPaths: [[path: "app"]]
                                     ],
                                     [
                                         $class: 'RelativeTargetDirectory', 
