@@ -18,7 +18,7 @@ node {
                                     ],
                                     [
                                         $class: 'RelativeTargetDirectory', 
-                                        relativeTargetDir: deploymentValuesFileDir
+                                        relativeTargetDir: "/deploymentValuesFileDir"
                                     ]  
                                ],
                                 gitTool                          : 'Default',
@@ -27,7 +27,7 @@ node {
                                                                     ]]
                         ])
         sh "cat Jenkinsfile"
-        sh "ls"
+        sh "ls /deploymentValuesFileDir"
         sh "cat a.sh"
     }
 }
