@@ -1,6 +1,7 @@
 node {
     stage('Example') {
      checkout scm;
+     sh "ls"
         
 //         echo "tanmay"
 //         checkout([
