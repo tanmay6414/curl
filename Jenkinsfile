@@ -15,7 +15,11 @@ node {
                                     [
                                         $class             : 'SparseCheckoutPaths',
                                         sparseCheckoutPaths: [[path: "Jenkinsfile"]]
-                                    ] 
+                                    ],
+                                    [
+                                        $class: 'RelativeTargetDirectory', 
+                                        relativeTargetDir: deploymentValuesFileDir
+                                    ]  
                                ],
                                 gitTool                          : 'Default',
                                 userRemoteConfigs                : [[
