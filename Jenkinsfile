@@ -10,11 +10,7 @@ node {
                                     [
                                         $class             : 'SparseCheckoutPaths',
                                         sparseCheckoutPaths: [[path: "app"]]
-                                    ],
-                                    [
-                                        $class: 'RelativeTargetDirectory', 
-                                        relativeTargetDir: deploymentValuesFileDir
-                                    ]                              
+                                    ]                            
                                ],
                                 gitTool                          : 'Default',
                                 userRemoteConfigs                : [[
