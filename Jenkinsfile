@@ -1,4 +1,11 @@
 node {
+    stage("Approval for Deployment") {
+        input {
+            message "Should we continue?"
+            ok "Yes, we should."
+            submitter "ankita"
+        }
+    }
     stage('Example') {
         sh " chmod +x /Users/tanmay.varade/vibrent/github/jenkins-scripts/jenkins/jobs/a.sh"
         echo "tanmay"
