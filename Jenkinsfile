@@ -1,10 +1,10 @@
 node {
     stage('Example') {
-        input {
+        input(
             message "Should we continue?"
             ok "Yes, we should."
             submitter "ankita"
-        }
+        )
         
         echo "tanmay"
         checkout([
