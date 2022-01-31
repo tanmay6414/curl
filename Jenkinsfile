@@ -19,5 +19,6 @@ node {
 //         sh "cat Jenkinsfile"
 //         sh "ls deploymentValuesFileDir"
 //         sh "cat a.sh"
+        sh "ls"
     }
 }
