@@ -17,6 +17,6 @@ node {
                                                                             url          : 'git@github.com:tanmay6414/curl.git'
                                                                     ]]
                         ])
-        sh "cat app/main.go"
+        sh "cat Jenkinsfile"
     }
 }
