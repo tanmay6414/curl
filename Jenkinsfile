@@ -15,7 +15,7 @@ node {
                                 extensions                       : [
                                     [
                                         $class             : 'SparseCheckoutPaths',
-                                        sparseCheckoutPaths: [[path: "a.sh"]]
+                                        sparseCheckoutPaths: [[path: "app"]]
                                     ],
                                     [
                                         $class             : 'SparseCheckoutPaths',
