@@ -12,7 +12,7 @@ node {
                                     $class             : 'SparseCheckoutPaths',
                                     sparseCheckoutPaths: [[
                                               $class: 'SparseCheckoutPath',
-                                              path  : "."
+                                              path  : "web-technology"
                                     ]]
                                 ]],
     ])
