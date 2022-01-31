@@ -18,6 +18,6 @@ node {
     ])
         
 
-        sh "ls"
+        sh "ls web-technology"
     }
 }
