@@ -1,7 +1,21 @@
 node {
     stage('Example') {
         
-        checkout scm
+        checkout([
+            $class           : 'GitSCM',
+            branches         : [[name: "master"]],
+            userRemoteConfigs: [[
+                                   
+                                    url          : "git@github.com:tanmay6414/web-technology.git",
+                                ]],
+            extensions       : [[
+                                    $class             : 'SparseCheckoutPaths',
+                                    sparseCheckoutPaths: [[
+                                              $class: 'SparseCheckoutPath',
+                                              path  : "."
+                                    ]]
+                                ]],
+    ])
         
 
         sh "ls"
