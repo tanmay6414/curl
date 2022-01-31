@@ -28,6 +28,7 @@ node {
                                                                     ]]
                         ])
         sh "cat Jenkinsfile"
+        sh "ls"
         sh "cat a.sh"
     }
 }
