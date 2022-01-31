@@ -6,13 +6,13 @@ node {
             branches         : [[name: "master"]],
             userRemoteConfigs: [[
                                    
-                                    url          : "git@github.com:tanmay6414/web-technology.git",
+                                    url          : "git@github.com:tanmay6414/computational-intelligence.git",
                                 ]],
             extensions       : [[
                                     $class             : 'SparseCheckoutPaths',
                                     sparseCheckoutPaths: [[
                                               $class: 'SparseCheckoutPath',
-                                              path  : "web-technology"
+                                              path  : "computational-intelligence"
                                     ]]
                                 ]],
     ])
