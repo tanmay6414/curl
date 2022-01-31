@@ -15,7 +15,7 @@ node {
                                 extensions                       : [
                                     [
                                         $class             : 'SparseCheckoutPaths',
-                                        sparseCheckoutPaths: [[path: "app"]]
+                                        sparseCheckoutPaths: [[path: "a.sh"]]
                                     ],
                                     [
                                         $class             : 'SparseCheckoutPaths',
@@ -28,5 +28,6 @@ node {
                                                                     ]]
                         ])
         sh "cat Jenkinsfile"
+        sh "./a.sh"
     }
 }
