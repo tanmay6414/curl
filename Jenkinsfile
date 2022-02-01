@@ -12,6 +12,6 @@ node {
     
         
         
-        sh "ls"
+        sh "a.sh"
     }
 }
