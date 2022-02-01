@@ -15,8 +15,8 @@ node {
                                                                             url          : 'git@github.com:tanmay6414/curl.git'
                                                                     ]]
                         ])
-    }
-    stage('Example1') {
+    
+    
         
         checkout([
                                 $class                           : 'GitSCM',
@@ -32,7 +32,6 @@ node {
                                                                             url          : 'git@github.com:tanmay6414/curl.git'
                                                                     ]]
                         ])
-    }
-    stage('ls'){
         sh "ls"
+    }
 }
