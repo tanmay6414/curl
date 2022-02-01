@@ -1,1 +1,1 @@
-echo "Vibrent Health"
+echo "${a}"
