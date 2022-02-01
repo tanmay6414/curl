@@ -12,6 +12,6 @@ node {
     
         
         
-        sh 'chmod +x a.sg && ./a.sh'
+        sh 'chmod +x a.sh && ./a.sh'
     }
 }
